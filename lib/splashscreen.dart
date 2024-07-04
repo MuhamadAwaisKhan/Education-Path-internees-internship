@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:internee/login.dart';
 import 'package:lottie/lottie.dart';
 
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -118,8 +119,9 @@ class _SplashScreenState extends State<SplashScreen> {
             right: 20,
             child: TextButton(
               onPressed: () {
-                // Navigator.pushReplacement(context,
-                //     MaterialPageRoute(builder: (context) => mainlogin()));
+                Navigator.pushReplacement(context,
+                    MaterialPageRoute(builder: (Context) => LoginUser()));
+                print("button is pressed");
               },
               child: Text('Skip', style: TextStyle(fontFamily: 'Poppins',
                   color: Colors.white)),
@@ -135,8 +137,8 @@ class _SplashScreenState extends State<SplashScreen> {
             child: GestureDetector(
               onTap: () {
                 if (_currentIndex == 3) {
-                  // Navigator.pushReplacement(context,
-                  //     MaterialPageRoute(builder: (context) => mainlogin()));
+                  Navigator.pushReplacement(context,
+                      MaterialPageRoute(builder: (Context) => LoginUser()));
                 } else {
                   _controller.nextPage();
                 }
