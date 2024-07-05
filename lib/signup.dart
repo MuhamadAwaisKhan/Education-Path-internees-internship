@@ -10,6 +10,7 @@ import 'package:internee/homescreen.dart';
 import 'package:internee/login.dart';
 import 'package:internee/util/AppColors.dart';
 import 'package:internee/util/uihelper.dart';
+import 'package:lottie/lottie.dart';
 
 
 class signup extends StatefulWidget {
@@ -55,7 +56,7 @@ class _signupState extends State<signup> {
             SnackBar(content: Text('Account Created successfully')),
           );
           Navigator.pushReplacement(context,
-              MaterialPageRoute(builder: (context) => homescreen()));
+              MaterialPageRoute(builder: (context) => HomeScreen()));
         });
         // Reset text fields after data is added
 
@@ -123,12 +124,12 @@ class _signupState extends State<signup> {
         backgroundColor: AppColors.background,
         body: SingleChildScrollView(
           child: Column(children: [
-            Center(
-              child: IconButton(
-                icon: Icon(Icons.account_circle, size: 60),
-                onPressed: () {},
-              ),
+            Lottie.asset(
+              'assets/images/signup.json',
+              height: 200,
+              fit: BoxFit.cover,
             ),
+            SizedBox(height: 22,),
             Center(
                 child: Text("Hello Customer !",
                     style: TextStyle(

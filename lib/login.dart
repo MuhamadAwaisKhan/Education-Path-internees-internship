@@ -38,12 +38,12 @@ class _LoginUserState extends State<LoginUser> {
           .signInWithEmailAndPassword(email: email, password: password);
       QuerySnapshot<Map<String, dynamic>> snapshot = await FirebaseFirestore
           .instance
-          .collection('users')
+          .collection('user')
           .where('email', isEqualTo: email)
           .get();
       if (snapshot.docs.isNotEmpty) {
         Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => homescreen()));
+            context, MaterialPageRoute(builder: (context) => HomeScreen()));
       } else {
         uihelper.CustomAlertbox(context, "User not found with this email");
       }
