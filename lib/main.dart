@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:internee/firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:internee/homescreen.dart';
 import 'package:internee/splashscreen.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -10,7 +11,8 @@ void main() async {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
 
-    home:SplashScreen(),
+    home:HomeScreen(),
+    // SplashScreen(),
 
   ));
 }
