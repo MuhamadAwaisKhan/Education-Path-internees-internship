@@ -1,42 +1,165 @@
 import 'package:flutter/material.dart';
 
-class FaqScreen extends StatefulWidget {
-  const FaqScreen({Key? key}) : super(key: key);
-
-  @override
-  State<FaqScreen> createState() => _FaqScreenState();
-}
-
-class _FaqScreenState extends State<FaqScreen> {
-  ExpansionTileController mcontroller=ExpansionTileController();
-  // It's best to define the FAQs list inside the state class if it doesn't need to be accessed externally
-  final List<Map<String, dynamic>> faqs = [
-    {
-      'title': 'Why You Were Not Selected',
-      'content': 'Dear applicants, we believe in transparency, and we\'d like to highlight a few reasons why some applications weren\'t successful in our internship selection process.'
-          '\n\n- Lack of Domain Knowledge: Our internship program is designed to provide immersive experiences in specific domains. This time, we observed that some applications did not showcase a strong understanding of the domain they applied for, hindering their chances of success.'
-          '\n\n- Limited Engagement: Successful interns contribute not only within our company but also to the community around them. We noticed that some applicants didn\'t engage with our news and updates, which is a crucial aspect of our internship culture.'
-          '\n\n- Multiple Domain Submissions: Applicants who apply for multiple domains often do not tailor their applications sufficiently for each specific area, reducing their overall chance of being selected.',
-    },
-    {
-      'title': 'How to Apply',
-      'content': 'Applying for our internship is simple! Visit our careers page, select the internship that fits your skills, and submit your application with a tailored cover letter and your resume. Remember to focus your application on the specific domain you are interested in.',
-    },
-    {
-      'title': 'Benefits of Interning with Us',
-      'content': 'Interning at our company offers numerous benefits including hands-on experience in your field of study, networking opportunities with professionals, and a potential path to full-time employment.'
-    },
-  ];
-
+class EducationScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('FAQs'),
-        centerTitle: true,
+        title: Text('Education Path'),
       ),
-      body:ExpansionTile(
-             title: Text("'Why You Were Not Selected"),
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                'Welcome to the Education Path!',
+                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                textAlign: TextAlign.center,
+              ),
+              SizedBox(height: 20),
+              Text(
+                'This path will guide you through our comprehensive educational resources designed to enhance your learning experience.',
+                style: TextStyle(fontSize: 18),
+                textAlign: TextAlign.center,
+              ),
+              SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => CoursesScreen()),
+                  );
+                },
+                child: Text('Explore Courses'),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class CoursesScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Courses'),
+      ),
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                'Explore our Courses',
+                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                textAlign: TextAlign.center,
+              ),
+              SizedBox(height: 20),
+              Text(
+                'We offer a variety of courses to cater to different interests and skill levels. Whether you are looking to develop new skills or enhance existing ones, we have something for everyone.',
+                style: TextStyle(fontSize: 18),
+                textAlign: TextAlign.center,
+              ),
+              SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => StudyGroupsScreen()),
+                  );
+                },
+                child: Text('Join Study Groups'),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class StudyGroupsScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Study Groups'),
+      ),
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                'Join our Study Groups',
+                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                textAlign: TextAlign.center,
+              ),
+              SizedBox(height: 20),
+              Text(
+                'Collaborate with peers, share knowledge, and work together to achieve your academic goals. Our study groups provide a supportive environment for learning and growth.',
+                style: TextStyle(fontSize: 18),
+                textAlign: TextAlign.center,
+              ),
+              SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => UpdatesScreen()),
+                  );
+                },
+                child: Text('Sign up for Updates'),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class UpdatesScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Latest Updates'),
+      ),
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                'Sign up for the Latest Updates',
+                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                textAlign: TextAlign.center,
+              ),
+              SizedBox(height: 20),
+              Text(
+                'Stay informed about our latest courses, events, and special offers. Sign up for our newsletter and never miss an update!',
+                style: TextStyle(fontSize: 18),
+                textAlign: TextAlign.center,
+              ),
+              SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () {
+                  // Action to sign up for updates
+                },
+                child: Text('Sign Up Now'),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }

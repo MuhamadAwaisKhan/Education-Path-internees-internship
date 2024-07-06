@@ -43,7 +43,7 @@ class _LoginUserState extends State<LoginUser> {
           .get();
       if (snapshot.docs.isNotEmpty) {
         Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => HomeScreen()));
+            context, MaterialPageRoute(builder: (Context) => HomeScreen()));
       } else {
         uihelper.CustomAlertbox(context, "User not found with this email");
       }
@@ -145,7 +145,7 @@ class _LoginUserState extends State<LoginUser> {
             if (_isLoading)
               CircularProgressIndicator(
                   color: Colors.lime, backgroundColor: Colors.black45),
-            SizedBox(height: 30),
+            SizedBox(height: 10),
             uihelper.CustomButton(
                 () => login(emailController.text.trim(),
                     passwordController.text.trim()),
@@ -178,7 +178,29 @@ class _LoginUserState extends State<LoginUser> {
                 ),
               ],
             ),
-            SizedBox(height: 18),
+            SizedBox(height: 20),
+            Column(
+              children: [
+                Padding(
+                  padding: EdgeInsets.only(left: 38.0),
+                  child: Text("Get Some Experience?",
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontFamily: 'Poppins',
+                          fontSize: 19)),
+                ),
+                SizedBox(height: 15),
+                Padding(
+                  padding: EdgeInsets.only(left: 15.0),
+                  child: uihelper.CustomButton(
+                          () =>  Navigator.push(context,
+    MaterialPageRoute(builder: (context) => HomeScreen())),
+                      "As a Guest",
+                      50,
+                      190),
+                ),
+              ],
+            ),
           ],
         ),
       ),

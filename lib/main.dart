@@ -3,6 +3,8 @@ import 'package:internee/firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:internee/homescreen.dart';
 import 'package:internee/splashscreen.dart';
+
+import 'CoursesCategory.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
@@ -11,8 +13,10 @@ void main() async {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
 
-    home:HomeScreen(),
-    // SplashScreen(),
+    home:
+    // CourseCategory(),
+    // HomeScreen(),
+      SplashScreen(),
 
   ));
 }
