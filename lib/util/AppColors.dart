@@ -14,7 +14,8 @@ class AppColors {
   static const Color secondaryColor = Colors.lightBlueAccent; // Use a specific shade like tealAccent[400] for more vibrance
   static const Color iconColor = Colors.white; // Common choice for icons for readability against dark colors
   static const Color heading12 = Colors.white; // Good contrast on dark backgrounds
-  static const Color background12 = Colors.grey; // Soft background that won't clash with deepPurple
+  static const Color background1 = Colors.grey;
+  static const Color background2 = Color(0XFFFEFAE0); // Soft background that won't clash with deepPurple
 
 
 }

@@ -34,7 +34,12 @@ class _forgetpasswordState extends State<forgetpassword> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Forget Password"),
+        title: Text("Forget Password",
+          style: TextStyle(
+            fontFamily: 'Poppins',
+            fontWeight: FontWeight.bold,
+            fontSize: 20,
+        ),),
         centerTitle: true,
         backgroundColor: AppColors.background,
       ),

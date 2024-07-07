@@ -26,7 +26,7 @@ class _applynowscreenState extends State<applynowscreen> {
           centerTitle: true,
           backgroundColor: AppColors.heading,
         ),
-        backgroundColor: AppColors.background,
+        backgroundColor: AppColors.background2,
         body: Column(children: [
           Center(
             child: Lottie.asset(

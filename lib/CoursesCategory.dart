@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:internee/applynow.dart';
+import 'package:internee/util/AppColors.dart';
 import 'CourseOverviewScreen.dart';
 
 class CourseCategory extends StatefulWidget {
@@ -180,7 +181,7 @@ class _CourseCategoryState extends State<CourseCategory> {
         ),
         centerTitle: true,
         backgroundColor: Colors.green,
-      ),
+      ),   backgroundColor: AppColors.background2,
       body: GridView.builder(
         padding: const EdgeInsets.all(16),
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -197,7 +198,7 @@ class _CourseCategoryState extends State<CourseCategory> {
             imageUrl: course['imageUrl'],
             color: course['color'],
             onTap: () => Navigator.of(context).push(
-              MaterialPageRoute(builder: (_) => CourseOverviewScreen()),
+              MaterialPageRoute(builder: (Context) => CourseOverviewScreen()),
             ),
           );
         },

@@ -16,6 +16,7 @@ class CourseOverviewScreen extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.teal,
       ),
+      backgroundColor: AppColors.background2,
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(16.0),

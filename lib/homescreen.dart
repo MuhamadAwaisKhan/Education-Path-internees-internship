@@ -70,14 +70,14 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home Screen',
+        title: Text('Education Path',
           style: TextStyle(
               fontFamily: 'Poppins',
               fontWeight: FontWeight.bold,
-              fontSize: 25,
+              fontSize: 20,
               color: AppColors.heading),),
         centerTitle: true,
-        backgroundColor: AppColors.background,
+        backgroundColor: AppColors.background2,
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.logout),
@@ -85,7 +85,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
       ),
-      backgroundColor: AppColors.background,
+      backgroundColor: AppColors.background2,
       body: SingleChildScrollView(
         child: Column(
           children: [
